@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" role="img" aria-label="KYRX - content-addressed coordination plane for LLM agent fleets"><title>KYRX - content-addressed coordination plane for LLM agent fleets</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f4d"/><stop offset="1" stop-color="#050d26"/></linearGradient>
+<linearGradient id="tt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#8ab4f8"/><stop offset="1" stop-color="#4285f4"/></linearGradient>
+<linearGradient id="hx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4285f4"/><stop offset="1" stop-color="#0b3d91"/></linearGradient>
+<pattern id="gr" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#4285f4" stroke-opacity=".08" stroke-width="1"/></pattern>
+<clipPath id="cp"><rect width="1280" height="420" rx="28"/></clipPath>
+<filter id="bl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="55"/></filter>
+<filter id="gw" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<g clip-path="url(#cp)">
+<rect width="1280" height="420" fill="url(#bg)"/>
+<rect width="1280" height="420" fill="url(#gr)"/>
+<circle cx="1040" cy="90" r="150" fill="#4285f4" opacity=".35" filter="url(#bl)"/>
+<circle cx="1180" cy="380" r="120" fill="#ea4335" opacity=".22" filter="url(#bl)"/>
+<circle cx="640" cy="440" r="110" fill="#fbbc04" opacity=".16" filter="url(#bl)"/>
+<circle cx="120" cy="-10" r="120" fill="#34a853" opacity=".16" filter="url(#bl)"/>
+</g>
+<rect x="1.5" y="1.5" width="1277" height="417" rx="27" fill="none" stroke="#8ab4f8" stroke-opacity=".28" stroke-width="2"/>
+<g font-family="Inter,'Segoe UI Variable Display','SF Pro Display',system-ui,Arial,sans-serif">
+<rect x="64" y="52" width="372" height="30" rx="15" fill="#ffffff" fill-opacity=".08" stroke="#8ab4f8" stroke-opacity=".5"/>
+<circle cx="84" cy="67" r="5" fill="#34a853"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" repeatCount="indefinite"/></circle>
+<text x="98" y="72" font-size="13" font-weight="600" letter-spacing="1.4" fill="#cfe0ff">MCP SERVER · CONTENT-ADDRESSED · CPU-FIRST</text>
+<text x="60" y="196" font-size="136" font-weight="800" letter-spacing="2" fill="url(#tt)">KYRX</text>
+<text x="66" y="244" font-size="29" font-weight="600" fill="#e6efff">Content-addressed coordination plane</text>
+<text x="66" y="280" font-size="29" font-weight="600" fill="#e6efff">for LLM agent fleets.</text>
+<text x="66" y="318" font-size="17" font-style="italic" fill="#8ab4f8">Compute where it is deterministic, infer where it is ambiguous.</text>
+<g font-size="15" font-weight="700">
+<rect x="64" y="342" width="196" height="38" rx="19" fill="#34a853" fill-opacity=".18" stroke="#34a853" stroke-opacity=".8"/><text x="162" y="366" text-anchor="middle" fill="#a8e6b7">96.1% fewer tokens</text>
+<rect x="272" y="342" width="196" height="38" rx="19" fill="#4285f4" fill-opacity=".2" stroke="#8ab4f8" stroke-opacity=".85"/><text x="370" y="366" text-anchor="middle" fill="#cfe0ff">0.62 ms p95 claim</text>
+<rect x="480" y="342" width="196" height="38" rx="19" fill="#fbbc04" fill-opacity=".16" stroke="#fbbc04" stroke-opacity=".8"/><text x="578" y="366" text-anchor="middle" fill="#fde293">9/9 bench criteria</text>
+</g>
+</g>
+<g>
+<g stroke="#8ab4f8" stroke-opacity=".55" stroke-width="2" stroke-dasharray="7 7" fill="none">
+<path id="p1" d="M830 120 L980 205"><animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.6s" repeatCount="indefinite"/></path>
+<path id="p2" d="M1150 108 L1000 200"><animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.6s" repeatCount="indefinite"/></path>
+<path id="p3" d="M840 322 L980 225"><animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.6s" repeatCount="indefinite"/></path>
+<path id="p4" d="M1160 312 L1000 222"><animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.6s" repeatCount="indefinite"/></path>
+</g>
+<polygon points="990,134 1050,168 1050,238 990,272 930,238 930,168" fill="#4285f4" opacity=".55" filter="url(#gw)"/>
+<polygon points="990,134 1050,168 1050,238 990,272 930,238 930,168" fill="url(#hx)" stroke="#ffffff" stroke-opacity=".75" stroke-width="2"/>
+<polygon points="990,156 1031,179 1031,227 990,250 949,227 949,179" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="1.5"/>
+<g font-family="'Cascadia Mono',Consolas,'SF Mono',monospace" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle"><text x="990" y="199">plane</text><text x="990" y="216" fill="#cfe0ff" font-weight="400">blake3</text></g>
+<circle r="6" fill="#ea4335"><animateMotion dur="2.2s" repeatCount="indefinite" path="M830 120 L980 205"/></circle>
+<circle r="6" fill="#fbbc04"><animateMotion dur="2.6s" begin=".4s" repeatCount="indefinite" path="M1150 108 L1000 200"/></circle>
+<circle r="6" fill="#34a853"><animateMotion dur="2.4s" begin=".8s" repeatCount="indefinite" path="M1000 222 L1160 312"/></circle>
+<circle r="6" fill="#ffffff"><animateMotion dur="2.8s" begin="1.1s" repeatCount="indefinite" path="M980 225 L840 322"/></circle>
+<g stroke-width="3" fill="#0f2a63">
+<circle cx="812" cy="108" r="30" stroke="#4285f4"/><circle cx="1168" cy="96" r="30" stroke="#ea4335"/><circle cx="822" cy="334" r="30" stroke="#fbbc04"/><circle cx="1178" cy="324" r="30" stroke="#34a853"/>
+</g>
+<g font-family="Inter,'Segoe UI',system-ui,Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle"><text x="812" y="113">A1</text><text x="1168" y="101">A2</text><text x="822" y="339">A3</text><text x="1178" y="329">A4</text></g>
+<g font-family="'Cascadia Mono',Consolas,'SF Mono',monospace" font-size="12" fill="#8ab4f8" text-anchor="middle"><text x="812" y="158">#9f3a…</text><text x="1168" y="146">#c71e…</text><text x="822" y="384">#04bd…</text><text x="1178" y="374">#e8a2…</text></g>
+<text x="990" y="304" text-anchor="middle" font-family="Inter,'Segoe UI',system-ui,Arial,sans-serif" font-size="13" letter-spacing="1.2" fill="#8ab4f8">HANDLES, NOT PROSE</text>
+</g>
+</svg>

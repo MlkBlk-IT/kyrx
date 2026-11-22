@@ -1,0 +1,117 @@
+[build-system]
+requires = ["hatchling>=1.33"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kyrx"
+version = "0.3.0"
+description = "Content-addressed coordination plane for LLM agent fleets"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Malik Belkacemi" }]
+keywords = ["mcp", "llm", "agents", "coordination", "content-addressed", "dag"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Typing :: Typed",
+]
+dependencies = [
+  "mcp>=2.3,<3",
+  "pydantic>=2.14,<3",
+  "pydantic-settings>=2.16,<3",
+  "httpx>=0.28,<1",
+  "orjson>=3.13,<4",
+  "blake3>=1.0,<2",
+  "wasmtime>=50,<51",
+]
+
+[project.urls]
+Homepage = "https://github.com/MlkBlk-IT/kyrx"
+Repository = "https://github.com/MlkBlk-IT/kyrx"
+Issues = "https://github.com/MlkBlk-IT/kyrx/issues"
+Changelog = "https://github.com/MlkBlk-IT/kyrx/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+tokenizer = [
+  "tiktoken>=0.8,<1",
+]
+dev = [
+  "mcp[cli]>=2.3,<3",
+  "pytest>=9.2,<10",
+  "pytest-asyncio>=1.4,<2",
+  "pytest-cov>=7.1,<8",
+  "hypothesis>=6.170,<7",
+  "ruff>=0.17,<1",
+  "mypy>=2.4,<3",
+]
+
+[project.scripts]
+kyrx = "kyrx.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kyrx"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "bench"]
+extend-exclude = [".venv*", "var", "build", "dist"]
+
+[tool.ruff.lint]
+select = [
+  "E", "W", "F", "I", "N", "UP", "B", "SIM", "RUF",
+  "ANN", "ASYNC", "S", "C4", "PT", "PTH", "TID", "ARG", "PL",
+]
+ignore = [
+  "PLR0913",  # tool signatures are positional by contract
+  "PLR0912",
+  "PLR0915",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "PLR2004", "ANN401"]
+"bench/**" = ["S101", "PLR2004", "T201"]
+# The tool parameters follow the wire contract, which is camelCase.
+"src/kyrx/mcp/tools.py" = ["N803"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+disallow_any_explicit = true
+disallow_untyped_defs = true
+warn_unreachable = true
+warn_return_any = true
+show_error_codes = true
+explicit_package_bases = true
+mypy_path = "src"
+namespace_packages = true
+plugins = ["pydantic.mypy"]
+files = ["src", "tests", "bench"]
+
+[[tool.mypy.overrides]]
+# The wasmtime host-function bridge is dynamically typed at the FFI boundary.
+module = "kyrx.sandbox.isolate"
+disallow_any_explicit = false
+
+[[tool.mypy.overrides]]
+# tiktoken is an optional dependency (extra "tokenizer"): typed when installed,
+# tolerated when absent. An inline ignore would fail one of the two cases.
+module = "tiktoken"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-q --strict-markers"
+markers = ["chaos: concurrency and fault-injection tests"]
+
+[tool.coverage.run]
+source = ["src/kyrx"]
+branch = true
