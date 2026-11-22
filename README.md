@@ -4,7 +4,7 @@
 
 <br/>
 
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-34a853?style=flat-square&labelColor=0b1f4d" alt="MIT license" /></a> <img src="https://img.shields.io/badge/version-0.3.0-4285f4?style=flat-square&labelColor=0b1f4d" alt="version 0.3.0" /> <img src="https://img.shields.io/badge/status-alpha-fbbc04?style=flat-square&labelColor=0b1f4d" alt="alpha" /> <img src="https://img.shields.io/badge/python-3.11%2B-4285f4?style=flat-square&logo=python&logoColor=white&labelColor=0b1f4d" alt="Python 3.11+" /> <img src="https://img.shields.io/badge/MCP-server-ea4335?style=flat-square&labelColor=0b1f4d" alt="MCP server" /> <img src="https://img.shields.io/badge/tests-107-34a853?style=flat-square&labelColor=0b1f4d" alt="107 tests" /> <img src="https://img.shields.io/badge/mypy-strict-4285f4?style=flat-square&labelColor=0b1f4d" alt="mypy strict" />
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-34a853?style=flat-square&labelColor=0b1f4d" alt="MIT license" /></a> <img src="https://img.shields.io/badge/version-0.3.0-4285f4?style=flat-square&labelColor=0b1f4d" alt="version 0.3.0" /> <img src="https://img.shields.io/badge/status-alpha-fbbc04?style=flat-square&labelColor=0b1f4d" alt="alpha" /> <img src="https://img.shields.io/badge/python-3.11%2B-4285f4?style=flat-square&logo=python&logoColor=white&labelColor=0b1f4d" alt="Python 3.11+" /> <img src="https://img.shields.io/badge/MCP-server-ea4335?style=flat-square&labelColor=0b1f4d" alt="MCP server" /> <img src="https://img.shields.io/badge/tests-182-34a853?style=flat-square&labelColor=0b1f4d" alt="182 tests" /> <img src="https://img.shields.io/badge/mypy-strict-4285f4?style=flat-square&labelColor=0b1f4d" alt="mypy strict" />
 
 <br/>
 
@@ -37,7 +37,7 @@ Details, per-client setup and honest limits: [Integrate](#integrate).
 ## Status
 
 `0.3.0` — the coordination engine is implemented and measured. The reference
-bench passes **9 criteria out of 9**, the test suite is green (**107 tests**),
+bench passes **9 criteria out of 9**, the test suite is green (**182 tests**),
 and the type checker is strict (`mypy --strict`, `Any` banned outside a single
 documented FFI boundary).
 
