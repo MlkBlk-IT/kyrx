@@ -12,6 +12,16 @@
 
 </div>
 
+> **Part of the [MLKBLK-IT ecosystem](https://github.com/MlkBlk-IT)** — local-first AI infrastructure,
+> CPU-only, documented honestly.
+>
+> **Stack:** [IcyLoom](https://github.com/MlkBlk-IT/icy-loom) (MCP tool gateway) ·
+> [Osiris](https://github.com/MlkBlk-IT/osiris) (context engine) ·
+> [KYRX](https://github.com/MlkBlk-IT/kyrx) (agent-fleet coordination) ·
+> [IcyCache](https://github.com/MlkBlk-IT/icycache) (LLM gateway + cache) ·
+> [Loom](https://github.com/MlkBlk-IT/mcp-loom-mcp) (portable context server)
+
+
 <br/>
 
 **KYRX** is an MCP server that lets a fleet of LLM sub-agents work on a shared plan **without ever passing full context between them**. Agents exchange **handles** (content addresses), not prose. State is computed by **deterministic reducers**, and a language model is called only on the steps explicitly flagged as ambiguous.
